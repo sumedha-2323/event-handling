@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App=()=>{
+
+  const clickHandle=(e,firstName)=>{
+    console.log("Hello, I am",firstName,e);
+  }
+  return(
+    <main className="container">
+      {/* <button className="button" onClick={clickHandle}>
+        click me
+      </button> */}
+
+      {/* using normal function for parameters*/}
+      {/* <button className="button" onClick={function(e){
+        return clickHandle(e, "sumedha");
+      }}>click me</button> */}
+
+      {/* using arrow function */}
+       <button className="button" onClick={(e) => clickHandle(e,"sumedha")}>click me</button>
+
+
+    </main>
+  )
 }
+
 
 export default App;
